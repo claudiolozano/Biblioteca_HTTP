@@ -119,7 +119,8 @@ namespace Biblioteca.Controllers
         {
             using (EditorialContext context = new EditorialContext())
             {
-                return context.Autores.FromSqlRaw("ReadAllAutores").ToList();
+                List<Autores> autores= context.Autores.FromSqlRaw("ReadAllAutores").ToList();
+                return autores;
             }
         }
 
